@@ -8,13 +8,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="mainframe">
-        
+    <div class="main-frame">
+        <div class="left">
+            <div class="game-list">
+                <!--Header-->
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <h3>Game Adder 3000</h3>
+            </div>
+            <form>
+                <div class="title">
+                    <label for="title">Title:</label>
+                    <br>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="platform">
+                    <label for="platform">Platform:</label>
+                    <br>
+                    <input type="radio" id="pc" name="platform" value="pc">PC
+                    <input type="radio" id="mac" name="platform" value="mac">MAC
+                </div>
+                <div class="compatibility">
+                    <label for="compatibility">Compatible?</label>
+                    <br>
+                    <input type="radio" id="yes" name="compatibility">Yes
+                    <input type="radio" id="no" name="compatibility">No
+                </div>
+                <div class="downloaders">
+                    <label for="downloaders">Downloaders:</label>
+                    <br>
+                    <input list="downloaders" id="inputField" name="downloaders">
+                    <datalist id="downloaders">
+                        <option value="GOG-Games">
+                        <option value="CS.RIN.RU">
+                        <option value="Torrminatorr">
+                        <option value="Fitgirl Repacks">
+                        <option value="DODI Repacks">
+                    </datalist>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
     </div>
-
-
-
-
 
     <script src="code.js"></script>
 </body>

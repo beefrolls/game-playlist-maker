@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-frame {
+    height: 500px;
+    width: 800px;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.left > .game-list {
+    height: 80%;
+    width: 80%;
+    background-color: aliceblue;
+}
+
+.right {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-content: center;
+    align-content: center;
+}
+
+.right > * {
+    background-color: aqua;
+}
