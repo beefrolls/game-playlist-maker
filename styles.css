@@ -22,19 +22,71 @@ body {
     background-color: aqua;
 }
 
-.left > .game-list {
-    height: 80%;
+.game-list {
+    height: 85%;
     width: 80%;
     background-color: aliceblue;
 }
 
-.right {
+.games {
+    height: 80%;
     display: grid;
-    grid-template-rows: max-content max-content;
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 80px));
+    gap: 10px;
     justify-content: center;
+    align-content: flex-start;
+    background-color: aquamarine;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 80px 70%;
+    grid-template-rows: max-content;
+    gap: 10px;
+    background-color: blueviolet;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+.info {
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
     align-content: center;
 }
 
-.right > * {
-    background-color: aqua;
+.info > * {
+    margin: 0;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: max-content 70%;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.right > .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+.right > form {
+    display: grid;
+    grid-template-rows: max-content max-content max-content max-content max-content;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+input[type=text],
+input[list=downloaders] {
+    width: 200px;
 }
