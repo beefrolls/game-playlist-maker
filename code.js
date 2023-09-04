@@ -52,6 +52,7 @@ const incompat = document.querySelector('#no');
 const btn = document.querySelector('#submit');
 
 
+
 const games = document.querySelector('.games');
 
 btn.addEventListener('click', function() {
@@ -93,22 +94,25 @@ function gameFactory(title, platform, compatibility, downloaders) {
 
     function createHTML() {
         const gameDiv = document.createElement('div');
+        const gameImg = document.createElement('img');
         const gameInfo = document.createElement('div');
         const gameTitle = document.createElement('h5');
         const gamePlat = document.createElement('p');
         const gameDL = document.createElement('p');
 
+        gameImg.src = 'images/icon.jpeg';
         gameTitle.innerText = title;
         gamePlat.innerText = platform;
         gameDL.innerText = downloaders;
 
         gameDiv.classList.add('game');
         gameInfo.classList.add('info');
-        gameInfo.appendChild(gameTitle)
-        gameInfo.appendChild(gamePlat)
-        gameInfo.appendChild(gameDL)
-        gameDiv.appendChild(gameInfo)
-        games.appendChild(gameDiv)
+        gameInfo.appendChild(gameTitle);
+        gameInfo.appendChild(gamePlat);
+        gameInfo.appendChild(gameDL);
+        gameDiv.appendChild(gameImg);
+        gameDiv.appendChild(gameInfo);
+        games.appendChild(gameDiv);
     }
 
     function checkHTML() {
